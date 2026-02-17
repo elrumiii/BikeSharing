@@ -45,6 +45,8 @@ filtered_df = main_df[(main_df["dteday"] >= pd.to_datetime(start_date)) &
 # DASHBOARD DISPLAY
 st.title('Bike Sharing Analytics Dashboard:sparkles:')
 
+st.write(filtered_df.columns)
+
 # --- METRIC SECTION ---
 col1, col2, col3 = st.columns(3)
 
@@ -155,4 +157,5 @@ user_labels = ['Casual', 'Registered']
 fig_pie, ax_pie = plt.subplots(figsize=(6, 6))
 ax_pie.pie(user_counts, labels=user_labels, autopct='%1.1f%%', colors=["#ff0d0d",'#66b3ff'], startangle=140)
 ax_pie.axis('equal')  # Agar bentuknya lingkaran sempurna
+
 st.pyplot(fig_pie)
