@@ -45,8 +45,6 @@ filtered_df = main_df[(main_df["dteday"] >= pd.to_datetime(start_date)) &
 # DASHBOARD DISPLAY
 st.title('Bike Sharing Analytics Dashboard:sparkles:')
 
-st.write(filtered_df.columns)
-
 # --- METRIC SECTION ---
 col1, col2, col3 = st.columns(3)
 
@@ -63,7 +61,7 @@ with col2:
 with col3:
     # Menampilkan rata-rata suhu (pastikan dikalikan 41 jika datanya masih ternormalisasi)
     # Jika data Anda sudah bersih dan dalam Celcius, langsung gunakan .mean()
-    avg_temp = filtered_df.temp_day.mean() * 41 
+    avg_temp = filtered_df.temp.mean() * 41 
     st.metric("Rata-rata Suhu", value=f"{avg_temp:.1f} °C")
 
 # Pertanyaan 1: Blok Waktu
@@ -159,3 +157,4 @@ ax_pie.pie(user_counts, labels=user_labels, autopct='%1.1f%%', colors=["#ff0d0d"
 ax_pie.axis('equal')  # Agar bentuknya lingkaran sempurna
 
 st.pyplot(fig_pie)
+
