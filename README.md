@@ -1,6 +1,6 @@
 # bike-sharing-project Dashboard ✨
 
-Ini adalah proyek analisis data Bike Sharing yang ditampilkan dalam bentuk dashboard interaktif menggunakan Streamlit.
+Ini adalah proyek analisis data Bike Sharing yang ditampilkan dalam bentuk dashboard interaktif menggunakan Streamlit. dibuat oleh Arif El Jalaluddin Rumi
 
 ## Setup Environment - Anaconda
 
@@ -25,3 +25,4 @@ pip install -r requirements.txt
 ```bash
 streamlit run main.py
 ```
+
